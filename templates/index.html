@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        #messages {
+            height: 300px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            padding: 10px;
+            overflow-y: auto;
+        }
+
+        #messageForm {
+            display: flex;
+        }
+
+        #messageInput {
+            flex-grow: 1;
+            padding: 8px;
+            margin-right: 10px;
+        }
+
+        .system-message {
+            color: #666;
+            font-style: italic;
+        }
+
+        .user-message {
+            color: #000;
+        }
+
+        .my-message {
+            color: #0066cc;
+            font-weight: bold;
+        }
+
+        .status {
+            padding: 10px 0;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Real-time Chat Application</h1>
+
+    <div class="status" id="connectionStatus">Connecting to server...</div>
+
+    <div id="messages"></div>
+
+    <form id="messageForm">
+        <input type="text" id="messageInput" placeholder="Type a message..." autocomplete="off">
+        <button type="submit">Send</button>
+    </form>
+
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
